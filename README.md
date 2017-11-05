@@ -12,7 +12,7 @@ This module should make things easier: instead of rely on init.d, it uses the bu
 // Project Zhana & X.A.N.A by @Asiier | GhostPepper, HawkPepper and FairPark by @Asiier \\
 I have just editet the /system/bin/AKT file to make it compatible with Magisk
 
-##XDA likns
+## XDA likns
 	[[AKT] Advanced Kernel Tweaks v1.6 FINAL | Insane Battery & Performance(SD820/1|OP3/T)](https://forum.xda-developers.com/oneplus-3/how-to/advanced-interactive-governor-tweaks-t3476589)
 
 ## Change Log
