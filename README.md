@@ -1,13 +1,13 @@
 # AKT Profile for Magsik
 AKT Profile by Asiier & Senthil360 for Magisk in order to use post-fs-data.d.
 
-###Is this necessary?
+### Is this necessary?
 I can't fully mount the /system partition and so /system/etc/init.d/99AKT is not editable.
 The result is that at each boot/reboot I have to go through the whole procedure to apply the setting.
 
 This module should make things easier: instead of rely on init.d, it uses the built-in function of magisk.
 
-##Profiles Credits:
+## Profiles Credits:
 // Nameless by @Senthil360 | Fusion by @patalao | Burnout PR3 by @Mostafa Wael \\
 // Project Zhana & X.A.N.A by @Asiier | GhostPepper, HawkPepper and FairPark by @Asiier \\
 I have just editet the /system/bin/AKT file to make it compatible with Magisk
