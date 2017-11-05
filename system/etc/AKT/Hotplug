@@ -1,0 +1,11 @@
+#!/system/bin/sh
+#Author: Asiier
+#Settings By: Asiier
+#Device: One Plus 3
+echo Hotpluging CPU1 and CPU3
+chmod 644 /sys/devices/system/cpu/cpu1/online
+chmod 644 /sys/devices/system/cpu/cpu3/online
+echo 0 > /sys/devices/system/cpu/cpu1/online
+echo 0 > /sys/devices/system/cpu/cpu3/online
+chmod 444 /sys/devices/system/cpu/cpu1/online
+chmod 444 /sys/devices/system/cpu/cpu3/online

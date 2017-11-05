@@ -1,0 +1,934 @@
+#!/system/bin/sh
+#All-in-One Project
+#Scripted - Asiier & Senthil360
+#Tweaks - @Senthil360 @Mostafa Wael @Patalao @Asiier
+#Adapted for Magisk - Razorphyn
+aktBootRunPath=/magisk/aktprofilemagisk/post-fs-data.sh
+aktProfilesPath=/system/etc/AKT
+divider="  =============================  "
+echo ""
+echo "$divider"
+echo -e "\e[01;36m   - All-in-One Project - \e[00;37m"
+echo -e "\e[01;36m - Advanced·Kernel·Tweaks - \e[00;37m"
+echo -e "\e[01;36m         - [A·K·T] -   \e[00;37m"
+echo -e "\e[01;36m      ~ Stable - 1.6 ~   \e[00;37m"
+echo "$divider"
+sleep 1
+echo ""
+echo -e "\e[01;36m *** By Asiier & Senthil360 *** \e[00;37m"
+echo ""
+sleep 1
+clear
+BatteryOP3()
+{
+while true; do
+echo -e "\e[01;91m   UP  Less Battery / More Performance \e[00;37m"
+echo -e "\e[01;33m   | \e[00;37m"
+echo -e "\e[01;93m   | \e[00;37m"
+echo -e "\e[01;92m DOWN  More Battery / Less Performance \e[00;37m"
+echo ""
+sleep 1.5
+echo -e "\e[02;91m 1.) Project Zhana Battery by @Asiier \e[00;37m"
+echo -e "\e[01;31m 2.) Nameless Battery by @Senthil360  \e[00;37m"
+echo -e "\e[02;33m 3.) FairPark by @Asiier \e[00;37m"
+echo -e "\e[01;93m 4.) Fusion Conservative by @patalao \e[00;37m"
+echo -e "\e[01;93m 5.) Project X.A.N.A Battery by @Asiier \e[00;37m"
+echo -e "\e[01;92m 6.) Project X.A.N.A Battery Extreme by @Asiier \e[00;37m"
+echo -e "\e[01;90m 7.) Additional tweaks... \e[00;37m"
+echo -e "\e[01;94m 8.) Main menu \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -n "Please select a profile:"
+read -r option
+echo ""
+case $option in
+1 ) #Project_Zhana_Battery
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PZ_battery > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PZ_battery
+clear
+sh "$aktProfilesPath"/PZ_battery
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+2 ) #Nameless_Battery 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/NLB_battery > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/NLB_battery
+clear
+sh "$aktProfilesPath"/NLB_battery
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+3 ) #FairPark
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FairPark > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FairPark
+clear
+sh "$aktProfilesPath"/FairPark
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+4 ) #Fusion Conservative
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FusionC > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FusionC
+clear
+sh "$aktProfilesPath"/FusionC
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+5 ) #Project_XANA_Battery
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PX_battery > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PX_battery
+clear
+sh "$aktProfilesPath"/PX_battery
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+6 ) #Project_XANA_Extreme
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PX_battery_extreme > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PX_battery_extreme
+clear
+sh "$aktProfilesPath"/PX_battery_extreme
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+7 ) echo "Coming soon"
+echo " You tell me what to add here"
+sleep 2;
+clear; main_menu_op3;
+exit;;
+8 ) clear; main_menu_op3;;
+* ) clear; echo " Please, enter a valid option..."; 
+sleep 2;
+clear;;
+esac
+# }
+ done
+}
+BatteryOP3T()
+{
+while true; do
+echo -e "\e[01;91m   UP  Less Battery / More Performance \e[00;37m"
+echo -e "\e[01;33m   | \e[00;37m"
+echo -e "\e[01;93m   | \e[00;37m"
+echo -e "\e[01;92m DOWN  More Battery / Less Performance \e[00;37m"
+echo ""
+sleep 1.5
+echo -e "\e[02;91m 1.) Project Zhana Battery by @Asiier \e[00;37m"
+echo -e "\e[01;31m 2.) Nameless Battery by @Senthil360  \e[00;37m"
+echo -e "\e[02;33m 3.) FairPark by @Asiier \e[00;37m"
+echo -e "\e[01;93m 4.) Fusion Conservative by @patalao \e[00;37m"
+echo -e "\e[01;93m 5.) Project X.A.N.A Battery by @Asiier \e[00;37m"
+echo -e "\e[01;92m 6.) Project X.A.N.A Battery Extreme by @Asiier \e[00;37m"
+echo -e "\e[01;90m 7.) Additional tweaks... \e[00;37m"
+echo -e "\e[01;94m 8.) Main menu \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -n "Please select a profile:"
+read -r option
+echo ""
+case $option in
+1 ) #Project_Zhana_Battery
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PZ_batteryT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PZ_batteryT
+clear
+sh "$aktProfilesPath"/PZ_batteryT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+2 ) #Nameless_Battery 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/NLB_batteryT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/NLB_batteryT
+clear
+sh "$aktProfilesPath"/NLB_batteryT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+3 ) #FairPark
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FairParkT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FairParkT
+clear
+sh "$aktProfilesPath"/FairParkT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+4 ) #Fusion Conservative
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FusionCT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FusionCT
+clear
+sh "$aktProfilesPath"/FusionCT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+5 ) #Project_XANA_Battery
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PX_batteryT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PX_batteryT
+clear
+sh "$aktProfilesPath"/PX_batteryT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+6 ) #Project_XANA_Extreme
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PX_battery_extremeT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PX_battery_extremeT
+clear
+sh "$aktProfilesPath"/PX_battery_extremeT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+7 ) echo "Coming soon"
+echo " You tell me what to add here"
+sleep 2;
+clear; main_menu_op3t;
+exit;;
+8 ) clear; main_menu_op3t;;
+* ) clear; echo " Please, enter a valid option..."; 
+sleep 2;
+clear;;
+esac
+# }
+ done
+}
+PerformanceOP3()
+{
+while true; do
+echo -e "\e[01;91m   UP  Less Battery / More Performance \e[00;37m"
+echo -e "\e[01;33m   | \e[00;37m"
+echo -e "\e[01;93m   | \e[00;37m"
+echo -e "\e[01;92m DOWN  More Battery / Less Performance \e[00;37m"
+echo ""
+sleep 1.5
+echo -e "\e[01;91m 1.) Burnout PR4 by @Mostafa Wael \e[00;37m"
+echo -e "\e[01;91m 2.) Burnout PR3 by @Mostafa Wael \e[00;37m"
+echo -e "\e[01;33m 3.) Nameless Perfomance by @Senthil360 \e[00;37m"
+echo -e "\e[01;92m 4.) Fusion Performance by @Patalao \e[00;37m"
+echo -e "\e[01;90m 5.) Additional tweaks... \e[00;37m"
+echo -e "\e[01;94m 6.) Main menu \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -n "Please select a profile:"
+read -r option
+echo ""
+case $option in
+1 ) #Burnout PR3 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/BEF > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/BEF
+clear
+sh "$aktProfilesPath"/BEF
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+2 ) #Burnout PR3.5 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/BPN > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/BPN
+clear
+sh "$aktProfilesPath"/BPN
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+3 )  #Nameless Performance
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/NLB_performance > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/NLB_performance
+clear
+sh "$aktProfilesPath"/NLB_performance
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+4 ) #Fusion Perfomance
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FusionP > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FusionP
+clear
+sh "$aktProfilesPath"/FusionP
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+5 ) clear
+echo "Coming Soon"
+echo "You tell me what others tweaks you want me too add"
+sleep 5; main_menu_op3;
+exit;;
+6 ) clear; main_menu;;
+* ) echo " Please, enter a valid option..."
+sleep 2
+esac
+# }
+ done
+}
+PerformanceOP3T()
+{
+while true; do
+echo -e "\e[01;91m   UP  Less Battery / More Performance \e[00;37m"
+echo -e "\e[01;33m   | \e[00;37m"
+echo -e "\e[01;93m   | \e[00;37m"
+echo -e "\e[01;92m DOWN  More Battery / Less Performance \e[00;37m"
+echo ""
+sleep 1.5
+echo -e "\e[01;91m 1.) Burnout PR4 by @Mostafa Wael \e[00;37m"
+echo -e "\e[01;33m 2.) Nameless Perfomance by @Senthil360 \e[00;37m"
+echo -e "\e[01;92m 3.) Fusion Performance by @Patalao \e[00;37m"
+echo -e "\e[01;90m 4.) Additional tweaks... \e[00;37m"
+echo -e "\e[01;94m 5.) Main menu \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -n "Please select a profile:"
+read -r option
+echo ""
+case $option in
+1 ) #Burnout PR3 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/BEFT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/BEFT
+clear
+sh "$aktProfilesPath"/BEFT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+#2 ) #Burnout PR3.5 
+#if [ -e "$aktBootRunPath" ]; then
+#cat "$aktProfilesPath"/BPN > "$aktBootRunPath"
+#chmod 755 "$aktBootRunPath"
+#fi
+#clear
+#sh "$aktProfilesPath"/BPN
+#clear
+#echo " Installation finished... "
+#echo " For additional information and questions, please visit our XDA thread"
+#sleep 5; main_menu_op3t;
+#exit;;
+2 )  #Nameless Performance
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/NLB_performanceT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/NLB_performanceT
+clear
+sh "$aktProfilesPath"/NLB_performanceT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+3 ) #Fusion Perfomance
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FusionPT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FusionPT
+clear
+sh "$aktProfilesPath"/FusionPT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+4 ) clear
+echo "Coming Soon"
+echo "You tell me what others tweaks you want me too add"
+sleep 5; main_menu_op3t;
+exit;;
+5 ) clear; main_menu_op3t;;
+* ) echo " Please, enter a valid option..."
+sleep 2
+esac
+# }
+ done
+}
+BalancedOP3()
+{
+while true; do
+echo -e "\e[01;91m   UP  Less Battery / More Performance \e[00;37m"
+echo -e "\e[01;33m   | \e[00;37m"
+echo -e "\e[01;93m   | \e[00;37m"
+echo -e "\e[01;92m DOWN  More Battery / Less Performance \e[00;37m"
+echo ""
+sleep 1.5
+echo -e "\e[02;91m 1.) Fusion Reborn by @Patalao \e[00;37m"
+echo -e "\e[02;91m 2.) GhostPepper by @Asiier \e[00;37m"
+echo -e "\e[01;31m 3.) Fusion Balanced by @Patalao \e[00;37m"
+echo -e "\e[02;33m 4.) Nameless Balanced by @Senthil360 \e[00;37m"
+echo -e "\e[01;93m 5.) HawkPepper by @Asiier \e[00;37m"
+echo -e "\e[01;92m 6.) Project by Zhana Balanced by @Asiier \e[00;37m"
+echo -e "\e[01;92m 7.) Project by X.A.N.A Balanced by @Asiier \e[00;37m"
+echo -e "\e[01;90m 8.) Additional tweaks... \e[00;37m"
+echo -e "\e[01;94m 9.) Main menu \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -n "Please select a profile:"
+read -r option
+echo ""
+case $option in
+1 ) #FusionR
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FusionR > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FusionR
+clear
+sh "$aktProfilesPath"/FusionR
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+2 ) #GhostPepper
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/GhostPepper > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/GhostPepper
+clear
+sh "$aktProfilesPath"/GhostPepper
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+3 ) #Fusion Balanced
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FusionB > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FusionB
+clear
+sh "$aktProfilesPath"/FusionB
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+4 ) #Nameless Balanced 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/NLB_balanced > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/NLB_balanced
+clear
+sh "$aktProfilesPath"/NLB_balanced
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+5 ) #HawkPepper 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/HawkPepper > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/HawkPepper
+clear
+sh "$aktProfilesPath"/HawkPepper
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+6 ) #Project Zhana Balanced
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PZ_balanced > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PZ_balanced
+clear
+sh "$aktProfilesPath"/PZ_balanced
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+7 ) #Project XANA Balanced
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PX_balanced > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PX_balanced
+clear
+sh "$aktProfilesPath"/PX_balanced
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+8 ) echo "Coming soon"
+echo " You tell me what to add here"
+sleep 2; main_menu_op3;
+exit;;
+9 ) clear; main_menu_op3;;
+* ) echo " Please, enter a valid option..."
+sleep 2
+clear;;
+esac
+# }
+done
+}
+BalancedOP3T()
+{
+while true; do
+echo -e "\e[01;91m   UP  Less Battery / More Performance \e[00;37m"
+echo -e "\e[01;33m   | \e[00;37m"
+echo -e "\e[01;93m   | \e[00;37m"
+echo -e "\e[01;92m DOWN  More Battery / Less Performance \e[00;37m"
+echo ""
+sleep 1.5
+echo -e "\e[02;91m 1.) GhostPepper by @Asiier \e[00;37m"
+echo -e "\e[01;31m 2.) Fusion Balanced by @Patalao \e[00;37m"
+echo -e "\e[02;33m 3.) Nameless Balanced by @Senthil360 \e[00;37m"
+echo -e "\e[01;93m 4.) HawkPepper by @Asiier \e[00;37m"
+echo -e "\e[01;92m 5.) Project by Zhana Balanced by @Asiier \e[00;37m"
+echo -e "\e[01;92m 6.) Project by X.A.N.A Balanced by @Asiier \e[00;37m"
+echo -e "\e[01;90m 7.) Additional tweaks... \e[00;37m"
+echo -e "\e[01;94m 8.) Main menu \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -n "Please select a profile:"
+read -r option
+echo ""
+case $option in
+1 ) #GhostPepper
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/GhostPepperT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/GhostPepperT
+clear
+sh "$aktProfilesPath"/GhostPepperT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+2 ) #Fusion Balanced
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/FusionBT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/FusionBT
+clear
+sh "$aktProfilesPath"/FusionBT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+3 ) #Nameless Balanced 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/NLB_balancedT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/NLB_balancedT
+clear
+sh "$aktProfilesPath"/NLB_balancedT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+4 ) #HawkPepper 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/HawkPepperT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/HawkPepperT
+clear
+sh "$aktProfilesPath"/HawkPepperT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+5 ) #Project Zhana Balanced
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PZ_balancedT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PZ_balancedT
+clear
+sh "$aktProfilesPath"/PZ_balancedT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+6 ) #Project XANA Balanced
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/PX_balancedT > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/PX_balancedT
+clear
+sh "$aktProfilesPath"/PX_balancedT
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3t;
+exit;;
+7 ) echo "Coming soon"
+echo " You tell me what to add here"
+sleep 2; main_menu_op3t;
+exit;;
+8 ) clear; main_menu_op3t;;
+* ) echo " Please, enter a valid option..."
+sleep 2
+clear;;
+esac
+# }
+done
+}
+EAS_OP3()
+{
+while true; do
+echo -e "\e[01;91m   UP  Less Battery / More Performance \e[00;37m"
+echo -e "\e[01;33m   | \e[00;37m"
+echo -e "\e[01;93m   | \e[00;37m"
+echo -e "\e[01;92m DOWN  More Battery / Less Performance \e[00;37m"
+echo ""
+sleep 1.5
+echo -e "\e[01;91m 1.) Burnout EAS by @Mostafa Wael \e[00;37m"
+echo -e "\e[01;90m 2.) Additional tweaks... \e[00;37m"
+echo -e "\e[01;94m 3.) Main menu \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -n "Please select a profile:"
+read -r option
+echo ""
+case $option in
+1 ) #Burnout EAS
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/BEF > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/BEF
+clear
+sh "$aktProfilesPath"/BEF
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+2 ) #Burnout PR3.5 
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/BPN > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/BPN
+clear
+sh "$aktProfilesPath"/BPN
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+3 )  #Nameless Performance
+if [ -e "$aktBootRunPath" ]; then
+cat "$aktProfilesPath"/NLB_performance > "$aktBootRunPath"
+chmod 755 "$aktBootRunPath"
+fi
+chmod 777 "$aktProfilesPath"/NLB_performance
+clear
+sh "$aktProfilesPath"/NLB_performance
+clear
+echo " Installation finished... "
+echo " For additional information and questions, please visit our XDA thread"
+sleep 5; main_menu_op3;
+exit;;
+8 ) clear; main_menu_op3t;;
+* ) echo " Please, enter a valid option..."
+sleep 2
+clear;;
+esac
+# }
+done
+}
+Remove()
+{
+echo -e ""
+echo -e "\e[01;31m To fully remove this module, use Magisk Mangaer.\e[00;37m"
+echo -e "\e[01;31m If you simply need to return to stock value, use the Disable option.\e[00;37m"
+sleep 10
+clear;
+exit
+ }
+Disable()
+{
+echo ""
+cat "$aktProfilesPath"/DisableInitd > "$aktBootRunPath"
+cat "$aktProfilesPath"/DisableInitd > /storage/emulated/0/AKT
+if [ -e /data/system/current_profile ]; then
+   echo *None* | tee /data/system/current_profile
+fi
+chmod 644 "$aktBootRunPath"
+echo -e "\e[01;31m Permission resetted... \e[00;37m"
+echo -e "\e[01;31m File overwritten ... \e[00;37m"
+echo -e "\e[01;31m It's recommended to perform a reboot for disabling the tweaks \e[00;37m"
+sleep 2
+clear
+echo -e "\e[01;31m Please reboot your device!! \e[00;37m"
+sleep 5
+clear;
+ }
+main_menu_op3()
+{
+while true; do
+clear
+echo ""
+echo "$divider"
+echo -e "\e[01;36m < Advanced·Kernel·Tweaks > \e[00;37m"
+echo -e "\e[01;36m          - A·K·T -   \e[00;37m"
+echo -e "\e[01;36m  -for OP3 and SD820 Devices-  \e[00;37m"
+echo "$divider"
+echo ""
+echo -e "\e[01;32m  1. Battery \e[00;37m"
+echo ""
+echo -e "\e[01;34m  2. Balanced \e[00;37m"
+echo ""
+echo -e "\e[01;31m  3. Performance \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -e "\e[01;37m 4. Disable Tweaks \e[00;37m"
+echo ""
+echo -e "\e[01;37m 5. Remove A·K·T! \e[00;37m"
+echo ""
+echo -e "\e[00;36m 6. Exit \e[00;37m"
+echo ""
+if [ -e /data/system/current_profile ]; then
+ echo "$divider"
+ echo ""
+ string3=$(cat /data/system/current_profile)
+ echo -e " Current Profile:  \e[01;94m'\e[04;94m$string3\e[00;37m\e[01;94m'\e[00;37m"
+ echo ""
+ echo "$divider"
+fi
+echo -n "Enter choice: "
+read -r option
+echo ""
+case $option in
+	1 ) clear; BatteryOP3 ;;
+	2 ) clear; BalancedOP3 ;;
+	3 ) clear; PerformanceOP3 ;;
+	4 ) clear; Disable ;;
+	5 ) clear; Remove ;;
+	6 ) clear; exit ;; 
+	* ) echo " Please, enter a valid option..."
+	sleep 2
+	clear;;
+esac
+done
+ }
+ main_menu_op3t()
+{
+while true; do
+clear
+echo ""
+echo "$divider"
+echo -e "\e[01;36m < Advanced·Kernel·Tweaks > \e[00;37m"
+echo -e "\e[01;36m          - A·K·T -   \e[00;37m"
+echo -e "\e[01;36m  for OP3T and SD821 Devices  \e[00;37m"
+echo "$divider"
+echo ""
+echo -e "\e[01;32m  1. Battery \e[00;37m"
+echo ""
+echo -e "\e[01;34m  2. Balanced \e[00;37m"
+echo ""
+echo -e "\e[01;31m  3. Performance \e[00;37m"
+echo ""
+echo "$divider"
+echo ""
+echo -e "\e[01;37m 4. Disable Tweaks \e[00;37m"
+echo ""
+echo -e "\e[01;37m 5. Remove A·K·T! \e[00;37m"
+echo ""
+echo -e "\e[00;36m 6. Exit \e[00;37m"
+echo ""
+if [ -e /data/system/current_profile ]; then
+ echo "$divider"
+ echo ""
+ string3=$(cat /data/system/current_profile)
+ echo -e " Current Profile:  \e[01;94m'\e[04;94m$string3\e[00;37m\e[01;94m'\e[00;37m"
+ echo ""
+ echo "$divider"
+fi
+echo -n "Enter choice: "
+read -r option
+echo ""
+case $option in
+	1 ) clear; BatteryOP3T ;;
+	2 ) clear; BalancedOP3T ;;
+	3 ) clear; PerformanceOP3T ;;
+	4 ) clear; Disable ;;
+	5 ) clear; Remove ;;
+	6 ) clear; exit ;;
+	* ) echo " Please, enter a valid option..."
+	sleep 2
+	clear;;
+esac
+done
+ }
+ other()
+{
+echo ""
+echo -e "\e[01;31m We don't support any other device. \e[00;37m"
+sleep 2
+echo -e "\e[01;31m If you still want to use the tweaks select from above the device most similar to your device. \e[00;37m"
+sleep 3
+echo -e "\e[01;31m But expect NO SUPPORT for us!!! \e[00;37m"
+sleep 2
+sleep 4
+echo -e "\e[02;39m Going back to Main Menu ... \e[00;37m"
+sleep 5
+clear
+sleep 2; main_menu;
+exit;
+ }
+ reapply()
+{
+echo ""
+clear
+if [ -e "$aktBootRunPath" ]; then
+chmod 755 "$aktBootRunPath"
+sh "$aktBootRunPath"
+clear
+else
+echo -e "\e[01;31m Files not found or empty, check If the installation was succeful or try to Apply the profile at least onces \e[00;37m"
+sleep 4
+fi
+sleep 2; main_menu;
+exit;
+ }
+ main_menu()
+{
+while true; do
+clear
+echo ""
+echo "$divider"
+echo -e "\e[01;36m < Advanced·Kernel·Tweaks > \e[00;37m"
+echo -e "\e[01;36m          - A·K·T -   \e[00;37m"
+echo "$divider"
+echo -e "\e[01;36m        - Main Menu -  \e[00;37m"
+echo -e "\e[01;36m  Please select your device:  \e[00;37m"
+echo ""
+echo -e "\e[01;32m  1. OP3 / Snapdragon 820 Device \e[00;37m"
+echo ""
+echo -e "\e[01;34m  2. OP3T / Snapdragon 821 Device \e[00;37m"
+echo ""
+echo -e "\e[01;35m  3. Other Device \e[00;37m"
+echo ""
+echo -e "\e[01;37m  4. Reapply Current Profile \e[00;37m"
+echo ""
+echo -e "\e[01;31m  5. Exit \e[00;37m"
+echo ""
+if [ -e /data/system/current_profile ]; then
+ echo "$divider"
+ echo ""
+ string3=$(cat /data/system/current_profile)
+ echo -e " Current Profile:  \e[01;94m'\e[04;94m$string3\e[00;37m\e[01;94m'\e[00;37m"
+ echo ""
+ echo "$divider"
+fi
+echo -n "Enter choice: "
+read -r option
+echo ""
+case $option in
+	1 ) clear; main_menu_op3 ;;
+	2 ) clear; main_menu_op3t ;;
+	3 ) clear; other ;;
+	4 ) clear; reapply ;;
+	5 ) clear; exit ;; 
+	* ) echo " Please, enter a valid option..."
+	sleep 2
+	clear;;
+esac
+done
+ }
+ 
+while true; do
+main_menu
+done
