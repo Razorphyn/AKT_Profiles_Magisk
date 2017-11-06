@@ -29,10 +29,10 @@ AUTOMOUNT=true
 PROPFILE=false
 
 # Set to true if you need post-fs-data script
-POSTFSDATA=true
+POSTFSDATA=false
 
 # Set to true if you need late_start service script
-LATESTARTSERVICE=false
+LATESTARTSERVICE=true
 
 ##########################################################################################
 # Installation Message
@@ -90,7 +90,8 @@ set_permissions() {
   # The following is default permissions, DO NOT remove
   set_perm_recursive  $MODPATH  					0  0  0755  0644
   
-  set_perm $MODPATH/post-fs-data.sh					0 	2000 	0755
+  #set_perm $MODPATH/post-fs-data.sh				0 	2000 	0755
+  set_perm $MODPATH/service.sh						0 	2000 	0755
   
   set_perm_recursive $MODPATH/system/bin/AKT 		0 	0	 	0777 	0755
   set_perm_recursive $MODPATH/system/etc/AKT 		0 	0 		0777 	0755

@@ -3,7 +3,8 @@
 #Scripted - Asiier & Senthil360
 #Tweaks - @Senthil360 @Mostafa Wael @Patalao @Asiier
 #Adapted for Magisk - Razorphyn
-aktBootRunPath=/magisk/aktprofilemagisk/post-fs-data.sh
+#aktBootRunPath=/magisk/aktprofilemagisk/post-fs-data.sh
+aktBootRunPath=/magisk/aktprofilemagisk/service.sh
 aktProfilesPath=/system/etc/AKT
 divider="  =============================  "
 echo ""
