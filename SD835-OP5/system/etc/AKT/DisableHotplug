@@ -1,0 +1,34 @@
+#!/system/bin/sh
+#Author: Asiier
+#Settings By: Asiier
+#Device: One Plus 3 & SD820 Devices
+echo Disabling Hotplug on CPU1 and CPU3
+chmod 644 /sys/devices/system/cpu/cpu1/online
+chmod 644 /sys/devices/system/cpu/cpu3/online
+echo 1 > /sys/devices/system/cpu/cpu1/online
+echo 1 > /sys/devices/system/cpu/cpu3/online
+chmod 444 /sys/devices/system/cpu/cpu1/online
+chmod 444 /sys/devices/system/cpu/cpu3/online
+echo Re-adjusting Max freq
+maxfreq=$(cat "/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq")                
+if test $maxfreq -eq 1593600; then
+   #Temporarily change permissions to governor files for the Big cluster to set the maximum frequency to 1593MHz
+   chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+   echo 1593600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq     #Core 0 Maximum Frequency = 1593MHz        
+   chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+elif test $maxfreq -eq 1728000; then
+   #Temporarily change permissions to governor files for the Little cluster to set the maximum frequency to 1728MHz
+   chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+   echo 1728000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq     #Core 0 Maximum Frequency = 1728MHz        
+   chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+fi
+maxfreq_2=$(cat "/sys/devices/system/cpu/cpu2/cpufreq/cpuinfo_max_freq")                
+if test $maxfreq_2 -eq 2150400; then
+    chmod 644 /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+    echo 2150400 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+    chmod 444 /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+elif test $maxfreq_2 -eq 2265600; then
+    chmod 644 /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+    echo 2265600 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+    chmod 444 /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq
+fi
